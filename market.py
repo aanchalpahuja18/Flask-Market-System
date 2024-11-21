@@ -6,7 +6,7 @@ app = Flask(__name__)
 def home():
     return render_template('home.html')
 
-
+# 03 : Sending data to Templates
 @app.route('/market')
 def market_page():
     items = [
