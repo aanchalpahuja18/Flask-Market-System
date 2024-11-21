@@ -26,3 +26,17 @@ def market_page():
 # By using {% %} allows us to write the actual code which include the logic & not the variables only
 
 #  {% endfor %} to end the for loop we can use this
+
+# 04: Template Inheritance
+# Template inheritance is used when we want to use the same layout for every page. Create a base html file with which we want to implement the layout functionality to every page of our website. We can do this by using a special Jinja Syntax which allows us to do this: 
+
+# {% extends 'name_of_base_html_file' %}
+
+#  If we want specific changes for our pages with which we can differentiate among them is also by using a special Jinja syntax which is as follows: block is the name of that special function & title is the name of that block!
+
+# {% block title %}
+# {% endblock %}
+
+# Use different blocks for different specialization. 
+
+# To use the url inside the href of the nav bar make use of url_for() from a jinja template instead of using the hard coded values of the url bcoz if we want to change our routes/urls in future it will become difficult for us to change it everytime so put the argument of the name of the route inside of our url_for() function.It will work even if we change our urls so this is the best practice to take and use the name of the route with url_for()
